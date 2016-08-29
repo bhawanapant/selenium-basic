@@ -1,0 +1,26 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+/**
+ * Created by Bhawana on 24/08/2016.
+ */
+public class ChromeDriverTest {
+
+    public static final String CHROME_WEB_DRIVER_KEY = "webdriver.chrome.driver";
+    public static final String CHROME_WEB_DRIVER_EXE_PATH = "D:\\Software\\chromedriver\\chromedriver.exe";
+    public static final String BASE_URL = "https://www.google.co.uk";
+
+    public static void main(String[] args) throws InterruptedException {
+        // Set path for Internet Explorer Driver executable
+        System.setProperty(CHROME_WEB_DRIVER_KEY, CHROME_WEB_DRIVER_EXE_PATH);
+
+        // Launch ChromeDriver
+        WebDriver driver = new ChromeDriver();
+
+        // Open the web page
+        driver.get(BASE_URL);
+
+        // Close the driver
+        driver.quit();
+    }
+}
